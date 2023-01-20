@@ -1,0 +1,17 @@
+.cen {
+  margin: 15% 25%;
+}
+
+.col {
+  border: 1px solid;
+  border-radius: 70%;
+  border-color: rgba(74, 72, 72, 0.2);
+  width: 100px;
+  text-align: center;
+  padding-top: 15px;
+  margin: 2px;
+}
+
+p {
+  color: gray;
+}
