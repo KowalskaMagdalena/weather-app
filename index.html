@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/80f53361da.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js"></script>
+  </head>
+  <body>
+    <div class="card text-bg-light cen">
+      <div class="card-body">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <form id="search-form" class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="city"
+                placeholder="Enter a city"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-primary" type="submit">
+                Search
+              </button>
+              <button
+                id="current-location-button"
+                class="btn btn-outline-success ms-2"
+                type="submit"
+              >
+                Current
+              </button>
+            </form>
+          </div>
+        </nav>
+        <div class="container">
+          <h1 style="color: rgb(74, 72, 72)">Gdansk</h1>
+          <p id="date"></p>
+          <span><p id="description"></p></span>
+          <p>Humidity <span id="humidity"></span> %</p>
+          <p>Wind <span id="wind"></span> km/h</p>
+          <h2 style="color: rgb(74, 72, 72)">
+            <i class="fa-solid fa-cloud"></i><span id="temperature">19</span
+            ><a href="#" id="c-link">°C</a> | <a href="#" id="f-link">°F</a>
+          </h2>
+          <div class="row">
+            <div class="col">
+              <p>Mon</p>
+              <p>
+                <i
+                  class="fa-sharp fa-solid fa-bolt fa-2xl"
+                  style="color: rgb(65, 65, 65)"
+                ></i>
+              </p>
+              <p>3°C</p>
+            </div>
+            <div class="col">
+              <p>Tue</p>
+              <p>
+                <i
+                  class="fa-solid fa-smog fa-2xl"
+                  style="color: rgb(65, 65, 65)"
+                ></i>
+              </p>
+              <p>7°C</p>
+            </div>
+            <div class="col">
+              <p>Wed</p>
+              <p>
+                <i
+                  class="fa-solid fa-wind fa-2xl"
+                  style="color: rgb(65, 65, 65)"
+                ></i>
+              </p>
+              <p>5°C</p>
+            </div>
+            <div class="col">
+              <p>Thu</p>
+              <p>
+                <i
+                  class="fa-sharp fa-solid fa-snowflake fa-2xl"
+                  style="color: rgb(65, 65, 65)"
+                ></i>
+              </p>
+              <p>-2°C</p>
+            </div>
+            <div class="col">
+              <p>Fri</p>
+              <p>
+                <i
+                  class="fa-solid fa-sun fa-2xl"
+                  style="color: rgb(65, 65, 65)"
+                ></i>
+              </p>
+              <p>-5°C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
