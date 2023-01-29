@@ -5,43 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <!-- Axios -->
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <!-- FontAwsome -->
     <script
       src="https://kit.fontawesome.com/80f53361da.js"
       crossorigin="anonymous"
     ></script>
-    <script src="src/index.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="weather_app">
-        <h1>Warsaw</h1>
-        <ul>
-          <li>Friday 05:00</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <i
-              class="fa-solid fa-sun fa-2xl"
-              style="color: rgb(65, 65, 65)"
-            ></i>
-            <!-- <img src="" alt="Clear" /> -->
-            12°C | °F
-          </div>
-          <div class="col-6">
+      <div class="weather_app_wrapper">
+        <div class="weather_app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  id="city"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 73%</li>
-              <li>Wind: 2 km/h</li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <!-- <i
+                  class="fa-solid fa-sun fa-2xl float-left"
+                  style="color: rgb(65, 65, 65)"
+                ></i> -->
+                <img src="" alt="Clear" id="icon" />
+                <div>
+                  <strong id="temperature">12</strong
+                  ><span class="units">
+                    <a href="#" id="c-link">°C</a> |
+                    <a href="" # id="f-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
@@ -50,5 +83,6 @@
         </small>
       </div>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
