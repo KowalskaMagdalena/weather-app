@@ -1,9 +1,14 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#55a6d9, #d0f2ef);
+  background-attachment: fixed;
 }
 
 h1 {
-  color: #878787;
+  color: #323232;
   font-size: 24px;
   font-weight: 100;
   line-height: 29px;
@@ -17,9 +22,9 @@ ul {
 
 li {
   list-style: none;
-  margin: 0;
+  margin: 5px;
   padding: 0;
-  color: rgb(135, 135, 135);
+  color: rgb(32, 32, 32);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -27,6 +32,11 @@ li {
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 img {
@@ -43,6 +53,27 @@ img {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+.weather_app:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
 }
 
 .overview {
@@ -69,6 +100,25 @@ img {
   top: -34px;
   line-height: 1;
   font-weight: 400;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: #323232;
+}
+
+.weather-forecast-temperature {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.weather-forecast-temperature-min {
+  color: #ebfffd;
 }
 
 #description {

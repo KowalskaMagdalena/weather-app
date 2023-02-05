@@ -19,6 +19,13 @@
       src="https://kit.fontawesome.com/80f53361da.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -28,20 +35,25 @@
         <div class="weather_app">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-9">
+              <div class="input-group">
                 <input
                   type="search"
+                  class="form-control"
                   placeholder="Type a city..."
                   id="city"
-                  class="form-control"
+                  autocomplete="off"
                 />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  class="btn btn-primary w-100"
-                  value="Search"
-                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button
+                  class="btn btn-outline-primary addMore"
+                  type="button"
+                  id="location-btn"
+                  title="Current Location"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </button>
               </div>
             </div>
           </form>
@@ -63,8 +75,8 @@
                 <div>
                   <strong id="temperature">12</strong
                   ><span class="units">
-                    <a href="#" id="c-link">°C</a> |
-                    <a href="" # id="f-link">°F</a></span
+                    <a href="#" id="c-link" style="color: #323232">°C</a> |
+                    <a href="" # id="f-link" style="color: #323232">°F</a></span
                   >
                 </div>
               </div>
@@ -72,17 +84,27 @@
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+                <li>Pressure: <span id="pressure"></span> mb</li>
+                <li>Feels Like: <span id="feel"></span>°C</li>
               </ul>
             </div>
           </div>
+          <hr />
+          <h5 style="text-align: center">5-DAY-FORECAST</h5>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small>
-          <a href="https://github.com/Tasatira/weather-app" target="_blank"
-            >Open source code</a
-          >
-          by Magdalena Kowalska
-        </small>
+        <footer style="text-align: center">
+          <small style="color: #fafafa">
+            <a
+              style="color: #fafafa"
+              href="https://github.com/Tasatira/weather-app"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            by Magdalena Kowalska
+          </small>
+        </footer>
       </div>
     </div>
     <script src="src/index.js"></script>
