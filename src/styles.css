@@ -30,6 +30,10 @@ li {
   line-height: 19px;
 }
 
+hr {
+  color: #e0d7d7;
+}
+
 a {
   text-decoration: none;
 }
